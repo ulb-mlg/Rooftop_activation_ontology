@@ -1,0 +1,10 @@
+# CQ01: Which X are related to Y?
+PREFIX myont: <https://w3id.org/myont#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?x ?label ?y
+WHERE {
+  ?x a myont:SomeClass ;
+     rdfs:label ?label ;
+     myont:someProperty ?y .
+}

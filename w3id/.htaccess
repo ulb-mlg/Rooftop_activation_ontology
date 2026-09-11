@@ -1,0 +1,40 @@
+# Content negotiation for https://w3id.org/myont
+# Submit this file as w3id.org/myont/.htaccess in a pull request to
+# https://github.com/perma-id/w3id.org
+#
+# Replace YOUR-USER/my-ontology with your GitHub Pages address.
+
+Options +FollowSymLinks
+RewriteEngine on
+
+# Turtle
+RewriteCond %{HTTP_ACCEPT} text/turtle [OR]
+RewriteCond %{HTTP_ACCEPT} application/x-turtle [OR]
+RewriteCond %{HTTP_ACCEPT} text/n3
+RewriteRule ^$ https://YOUR-USER.github.io/my-ontology/ontology.ttl [R=303,L]
+
+# RDF/XML
+RewriteCond %{HTTP_ACCEPT} application/rdf\+xml
+RewriteRule ^$ https://YOUR-USER.github.io/my-ontology/ontology.xml [R=303,L]
+
+# JSON-LD
+RewriteCond %{HTTP_ACCEPT} application/ld\+json [OR]
+RewriteCond %{HTTP_ACCEPT} application/json
+RewriteRule ^$ https://YOUR-USER.github.io/my-ontology/ontology.jsonld [R=303,L]
+
+# N-Triples
+RewriteCond %{HTTP_ACCEPT} application/n-triples [OR]
+RewriteCond %{HTTP_ACCEPT} text/plain
+RewriteRule ^$ https://YOUR-USER.github.io/my-ontology/ontology.nt [R=303,L]
+
+# Direct requests for a specific serialisation
+RewriteRule ^ontology\.ttl$    https://YOUR-USER.github.io/my-ontology/ontology.ttl    [R=303,L]
+RewriteRule ^ontology\.xml$    https://YOUR-USER.github.io/my-ontology/ontology.xml    [R=303,L]
+RewriteRule ^ontology\.jsonld$ https://YOUR-USER.github.io/my-ontology/ontology.jsonld [R=303,L]
+RewriteRule ^ontology\.nt$     https://YOUR-USER.github.io/my-ontology/ontology.nt     [R=303,L]
+
+# Versioned IRIs, for example https://w3id.org/myont/1.0.0
+RewriteRule ^([0-9]+\.[0-9]+\.[0-9]+)/?$ https://YOUR-USER.github.io/my-ontology/releases/$1/ [R=303,L]
+
+# Anything else, including a browser, gets the HTML documentation
+RewriteRule ^(.*)$ https://YOUR-USER.github.io/my-ontology/ [R=303,L]

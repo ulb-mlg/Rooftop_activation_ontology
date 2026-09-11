@@ -1,0 +1,19 @@
+# WIDOCO
+.widoco/
+widoco.jar
+site/
+generated-doc/
+
+# Protege
+*.ttl~
+*.owl~
+*.bak
+.protege*
+
+# OS and editors
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+/.github

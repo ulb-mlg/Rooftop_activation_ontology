@@ -1,0 +1,70 @@
+# Ontology header template.
+# Paste these annotations into your owl:Ontology declaration, or add them in
+# Protege under "Active ontology > Annotations". WIDOCO reads them with the
+# -getOntologyMetadata flag and uses them to fill the documentation page.
+# Every annotation you omit becomes a red "missing" placeholder in the HTML.
+
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix vann:    <http://purl.org/vocab/vann/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix bibo:    <http://purl.org/ontology/bibo/> .
+@prefix schema:  <https://schema.org/> .
+@prefix org:     <http://www.w3.org/ns/org#> .
+@prefix myont:   <https://w3id.org/myont#> .
+
+<https://w3id.org/myont> a owl:Ontology ;
+
+    # ---- identity -------------------------------------------------------
+    dcterms:title            "My Ontology"@en ;
+    dcterms:description      "Full description of the scope, purpose and intended use of the ontology."@en ;
+    dcterms:abstract         "Short abstract shown at the top of the documentation page."@en ;
+    rdfs:comment             "Short description of the ontology."@en ;
+    vann:preferredNamespacePrefix "myont" ;
+    vann:preferredNamespaceUri    "https://w3id.org/myont#" ;
+
+    # ---- versioning -----------------------------------------------------
+    owl:versionIRI           <https://w3id.org/myont/1.0.0> ;
+    owl:versionInfo          "1.0.0" ;
+    dcterms:created          "2026-01-01"^^<http://www.w3.org/2001/XMLSchema#date> ;
+    dcterms:modified         "2026-01-01"^^<http://www.w3.org/2001/XMLSchema#date> ;
+    dcterms:issued           "2026-01-01"^^<http://www.w3.org/2001/XMLSchema#date> ;
+    bibo:status              <http://purl.org/ontology/bibo/status/published> ;
+
+    # ---- people ---------------------------------------------------------
+    # WIDOCO resolves author and contributor URIs if they are described below.
+    dcterms:creator          <https://orcid.org/0000-0000-0000-0000> ;
+    dcterms:contributor      <https://orcid.org/0000-0000-0000-0001> ;
+    dcterms:publisher        <https://ror.org/XXXXXXXXX> ;
+
+    # ---- licence --------------------------------------------------------
+    dcterms:license          <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:rights           "Copyright 2026 Your Name. Licensed under CC BY 4.0."@en ;
+
+    # ---- provenance and reuse -------------------------------------------
+    dcterms:source           <https://doi.org/10.xxxx/xxxxx> ;
+    dcterms:bibliographicCitation "Your Name (2026). My Ontology, version 1.0.0. https://w3id.org/myont"@en ;
+    schema:citation          <https://doi.org/10.xxxx/xxxxx> ;
+    rdfs:seeAlso             <https://github.com/YOUR-USER/my-ontology> ;
+    foaf:logo                <https://YOUR-USER.github.io/my-ontology/resources/logo.png> ;
+
+    # ---- imports and alignments ----------------------------------------
+    owl:imports              <https://w3id.org/bot#> ;
+    dcterms:requires         <https://w3id.org/bot#> ;
+.
+
+# ---- describe the people so WIDOCO can render names and affiliations ----
+<https://orcid.org/0000-0000-0000-0000> a foaf:Person ;
+    foaf:name    "Your Name" ;
+    foaf:mbox    <mailto:you@example.org> ;
+    org:memberOf <https://ror.org/XXXXXXXXX> .
+
+<https://orcid.org/0000-0000-0000-0001> a foaf:Person ;
+    foaf:name    "Co-author Name" ;
+    org:memberOf <https://ror.org/XXXXXXXXX> .
+
+<https://ror.org/XXXXXXXXX> a org:Organization ;
+    foaf:name     "Your University or Company" ;
+    foaf:homepage <https://example.org/> .
