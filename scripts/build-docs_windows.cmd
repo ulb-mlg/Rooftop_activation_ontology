@@ -38,15 +38,18 @@ set "ONT_IN=%ONTOLOGY_FILE:\=/%"
 set "OUT_IN=%OUT_DIR:\=/%"
 
 echo Running WIDOCO from %IMAGE% ...
-docker run --rm -v "%HOST_DIR%:/data" "%IMAGE%" -ontFile "/data/%ONT_IN%" -outFolder "/data/%OUT_IN%" -getOntologyMetadata -uniteSections -includeAnnotationProperties -lang %LANG_CODE% -rewriteAll -webVowl -htaccess -licensius -oops
+docker run --rm -v "%HOST_DIR%:/data" "%IMAGE%" -ontFile "/data/%ONT_IN%" -outFolder "/data/%OUT_IN%" -getOntologyMetadata -uniteSections -includeAnnotationProperties -lang %LANG_CODE% -rewriteAll -webVowl -htaccess -licensius -oops -noPlaceHolderText
 
 if errorlevel 1 (
   echo WIDOCO failed.
   goto :fail
 )
 
+docker run --rm -v "%HOST_DIR%:/data" -w /data alpine sed -i "/id=.ack. class=/r docs/acknowledgements.html" "%OUT_IN%/index-en.html"
+
 copy /Y "%ONTOLOGY_FILE%" "%OUT_DIR%\" >nul
 type nul > "%OUT_DIR%\.nojekyll"
+copy /Y "%OUT_DIR%\index-en.html" "%OUT_DIR%\index.html" >nul
 
 echo.
 echo Done. Preview with:

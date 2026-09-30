@@ -1,30 +1,51 @@
 cff-version: 1.2.0
 message: "If you use this ontology, please cite it as below."
-title: "Rooftop activation ontology"
-abstract: "Short description of the ontology."
+title: "Rooftop Activation Ontology"
+abstract: >-
+  The Rooftop Activation Ontology describes how building rooftops can be
+  activated through colour-coded activation types (blue, green, yellow, red,
+  purple, orange and gray) defined by the functions they host, such as water
+  management, vegetation, energy generation, social use or mobility. It links
+  rooftops and buildings to their attributes, owners, urban districts and the
+  urban challenges they address, and classifies the incentives that regions
+  implement to support activation by nature, function, funding source,
+  allocation mechanism, obligation attachment and project stage. Users can
+  register weighted associations between rooftop activation types, urban
+  challenges, owner types and incentive types, optionally per region.
 type: dataset
-version: "1.0.0"
-date-released: "2026-01-01"
-url: "https://w3id.org/myont"
-repository-code: "https://github.com/YOUR-USER/my-ontology"
+version: "2.0.0"
+# Add the release date (YYYY-MM-DD) when version 2.0.0 is published:
+date-released: "2026-09-29"
+url: "https://w3id.org/rooftop_activation"
+repository-code: "https://github.com/alejandro3500/rooftop_activation"
 license: CC-BY-4.0
 keywords:
   - ontology
+  - OWL
+  - rooftop activation
+  - multifunctional rooftops
+  - urban challenges
+  - incentives
   - built environment
   - linked building data
-  - OWL
 authors:
-  - family-names: Surname
-    given-names: Name
-    orcid: "https://orcid.org/0000-0000-0000-0000"
-    affiliation: "Your University or Company"
+  - family-names: Morales Hernandez
+    given-names: Alejandro
+    orcid: "https://orcid.org/0000-0003-0053-4902"
+    affiliation: "Université libre de Bruxelles"
+    email: alejandro.morales.hernandez@ulb.be, alejandro.morales.hern2014@gmail.com
+# Uncomment once a Zenodo DOI exists.
+# identifiers:
+#   - type: doi
+#     value: "10.5281/zenodo.XXXXXXX"
+#     description: "Zenodo archive of version 2.0.0"
 # Uncomment once a paper exists.
 # preferred-citation:
 #   type: conference-paper
 #   title: "Title of the paper"
 #   authors:
-#     - family-names: Surname
-#       given-names: Name
+#     - family-names: Morales Hernandez
+#       given-names: Alejandro
 #   collection-title: "Proceedings of ..."
 #   year: 2026
 #   doi: "10.xxxx/xxxxx"

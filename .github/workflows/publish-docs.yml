@@ -1,0 +1,67 @@
+name: Publish documentation
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "ontology/**"
+      - "docs/acknowledgements.html"
+      - ".github/workflows/publish-docs.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+
+      - name: Generate documentation with WIDOCO
+        run: |
+          # The WIDOCO container does not run as the runner user, so the
+          # output folder must be writable by any user
+          mkdir -p site
+          chmod 777 site
+          docker run --rm -v "$PWD:/data" ghcr.io/dgarijo/widoco:v1.4.25 \
+            -ontFile /data/ontology/rooftop_activation_ontology.rdf \
+            -outFolder /data/site \
+            -getOntologyMetadata -uniteSections -includeAnnotationProperties \
+            -lang en -rewriteAll -webVowl -htaccess -licensius -oops \
+            -noPlaceHolderText
+          # Give the generated files back to the runner user
+          sudo chown -R "$(id -u):$(id -g)" site
+
+      - name: Finalise the site
+        run: |
+          test -f site/index-en.html
+          if [ -f docs/acknowledgements.html ]; then
+            sed -i "/id=.ack. class=/r docs/acknowledgements.html" site/index-en.html
+          fi
+          cp site/index-en.html site/index.html
+          cp ontology/rooftop_activation_ontology.rdf site/
+          touch site/.nojekyll
+
+      - name: Upload the site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
