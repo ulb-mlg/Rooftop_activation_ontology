@@ -15,30 +15,30 @@
      xmlns:widoco="https://w3id.org/widoco/vocab#"
      xmlns:dcterms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/rooftop_activation">
-        <owl:versionIRI rdf:resource="https://w3id.org/rooftop_activation/2.1.0"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/rooftop_activation/2.2.0"/>
         <owl:imports rdf:resource="http://bimerr.iot.linkeddata.es/def/building#"/>
         <owl:imports rdf:resource="http://www.opengis.net/ont/geosparql/1.1"/>
         <dcterms:abstract xml:lang="en">The Rooftop Activation Ontology describes how building rooftops can be activated through colour-coded activation types (blue, green, yellow, red, purple, orange and gray) defined by the functions they host, such as water management, vegetation, energy generation, social use or mobility. It links rooftops and buildings to their attributes, owners, urban districts and the urban challenges they address, and classifies the incentives that regions implement to support activation by nature, function, funding source, allocation mechanism, obligation attachment and project stage.</dcterms:abstract>
-        <dcterms:bibliographicCitation>Morales Hernandez, A. (2026). Rooftop Activation Ontology (Version 2.1.0) Université libre de Bruxelles.</dcterms:bibliographicCitation>
+        <dcterms:bibliographicCitation>Morales Hernandez, A. (2026). Rooftop Activation Ontology (Version 2.2.0) Université libre de Bruxelles.</dcterms:bibliographicCitation>
         <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-08-14</dcterms:created>
         <dcterms:creator rdf:resource="https://orcid.org/0000-0003-0053-4902"/>
-        <dcterms:description xml:lang="en">The Rooftop Activation Ontology describes how building rooftops can be activated through colour-coded activation types (blue, green, yellow, red, purple, orange and gray) defined by the functions they host, such as water management, vegetation, energy generation, social use or mobility. It links rooftops and buildings to their attributes, owners, urban districts and the urban challenges they address, and classifies the incentives that regions implement to support activation by nature, function, funding source, allocation mechanism, obligation attachment and project stage. Users can register weighted associations between rooftop activation types, urban challenges, owner types and incentive types, optionally per region.</dcterms:description>
+        <dcterms:description xml:lang="en">The Rooftop Activation Ontology describes how building rooftops can be activated through colour-coded activation types (blue, green, yellow, red, purple, orange and gray) defined by the functions they host, such as water management, vegetation, energy generation, social use or mobility. It links rooftops and buildings to their attributes, owners, urban districts and the urban challenges they address, and classifies the incentives that regions implement to support activation by nature, function, funding source, allocation mechanism, obligation attachment and project stage. Users can register weighted associations between rooftop activation types, urban challenges, owner types, district types and incentive types, optionally per region.</dcterms:description>
         <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-30</dcterms:issued>
         <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
-        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-30</dcterms:modified>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-02</dcterms:modified>
         <dcterms:publisher rdf:resource="https://ror.org/01r9htc13"/>
         <dcterms:title xml:lang="en">Rooftop activation ontology</dcterms:title>
         <bibo:status rdf:resource="http://purl.org/ontology/bibo/status/published"/>
         <vann:preferredNamespacePrefix>rooftop_activation</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>https://w3id.org/rooftop_activation#</vann:preferredNamespaceUri>
         <rdfs:seeAlso rdf:resource="https://github.com/alejandro3500/Rooftop_activation_ontology/blob/main/README.md"/>
-        <owl:priorVersion rdf:resource="https://w3id.org/rooftop_activation/2.0.0"/>
-        <owl:versionInfo>2.1.0</owl:versionInfo>
+        <owl:priorVersion rdf:resource="https://w3id.org/rooftop_activation/2.1.0"/>
+        <owl:versionInfo>2.2.0</owl:versionInfo>
         <widoco:introduction xml:lang="en">Urban rooftops are increasingly recognised as multifunctional infrastructure that can help address challenges such as urban heat islands, flooding, energy demand and biodiversity loss. However, rooftop interventions, the owners who carry them out and the policy incentives that support them are usually described separately, which makes it difficult to align rooftop activation with urban policy.
 
 The Rooftop Activation Ontology provides a shared vocabulary to describe these elements and their relationships. It classifies rooftops into colour-coded activation types (blue, green, yellow, red, purple, orange and gray) according to the functions they host, and links rooftops and buildings to their attributes, owners, districts and regions. It organises urban challenges into thematic groups and classifies incentive instruments by nature, function, funding source, allocation mechanism, obligation attachment and project stage.
 
-Beyond this classification, the ontology allows users to register weighted associations: how strongly a rooftop activation type contributes to addressing an urban challenge, how likely an owner type is to activate a rooftop activation type, and how suitable an incentive type is for an owner type. Each association carries a degree between 0 and 1 and can be defined for a specific region, so the same model can hold the assessments of different cities. Using the queries provided in the documentation, users can retrieve, for a given rooftop, the challenges it addresses, the owner types likely to activate it and the incentives available to those owners.
+Beyond this classification, the ontology allows users to register weighted associations: how strongly a rooftop activation type contributes to addressing an urban challenge, how likely an owner type is to activate a rooftop activation type, how suitable an incentive type is for an owner type, how a district type is interested on addressing an urban challenge, and how an owner is interested on addressing an urban challenge. Each association carries a degree between 0 and 1 and can be defined for a specific region, so the same model can hold the assessments of different cities. Using the queries provided in the documentation, users can retrieve, for a given rooftop, the challenges it addresses, the owner types likely to activate it and the incentives available to those owners.
 
 Additional resources: the [guide to registering and querying association degrees](https://github.com/alejandro3500/Rooftop_activation_ontology/blob/main/docs/association_degrees_documentation.md), [registering CityJSON buildings in the ontology](https://github.com/alejandro3500/Rooftop_activation_ontology/blob/main/docs/buildings_from_cityjson_documentation.md), and [registering an incentive in the ontology](https://github.com/alejandro3500/Rooftop_activation_ontology/blob/main/docs/incentive_registration_documentation.md).</widoco:introduction>
     </owl:Ontology>
@@ -280,8 +280,11 @@ Additional resources: the [guide to registering and querying association degrees
         <owl:inverseOf rdf:resource="https://w3id.org/rooftop_activation#has_urban_challenge_district_priority"/>
         <rdfs:domain rdf:resource="https://w3id.org/rooftop_activation#District"/>
         <rdfs:range rdf:resource="https://w3id.org/rooftop_activation#Urban_Challenge"/>
-        <rdfs:comment xml:lang="en">Relates a district to the urban challenges most pressing within it. Inverse of has_urban_challenge_district_priority.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Relates a district to the urban challenges most pressing within it. Inverse of has_urban_challenge_district_priority.
+
+Deprecated since 2.2.0. Use District_Challenge_Association with relates_district_type, relates_challenge and has_degree.</rdfs:comment>
         <rdfs:label xml:lang="en">has district urban challenge priority</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -361,8 +364,11 @@ Additional resources: the [guide to registering and querying association degrees
         <owl:inverseOf rdf:resource="https://w3id.org/rooftop_activation#has_urban_challenge_owner_priority"/>
         <rdfs:domain rdf:resource="https://w3id.org/rooftop_activation#Owner"/>
         <rdfs:range rdf:resource="https://w3id.org/rooftop_activation#Urban_Challenge"/>
-        <rdfs:comment xml:lang="en">Relates an owner to the urban challenges they prioritise, used to match incentives and activation types to owner motivation. Inverse of has_urban_challenge_owner_priority.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Relates an owner to the urban challenges they prioritise, used to match incentives and activation types to owner motivation. Inverse of has_urban_challenge_owner_priority. 
+
+Deprecated since 2.2.0. Use Owner_Challenge_Association with relates_owner_type, relates_challenge and has_degree.</rdfs:comment>
         <rdfs:label xml:lang="en">has owner urban challenge priority</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -395,8 +401,11 @@ Additional resources: the [guide to registering and querying association degrees
     <owl:ObjectProperty rdf:about="https://w3id.org/rooftop_activation#has_urban_challenge_district_priority">
         <rdfs:domain rdf:resource="https://w3id.org/rooftop_activation#Urban_Challenge"/>
         <rdfs:range rdf:resource="https://w3id.org/rooftop_activation#District"/>
-        <rdfs:comment xml:lang="en">Inverse of has_district_urban_challenge_priority.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Inverse of has_district_urban_challenge_priority.
+
+Deprecated since 2.2.0. Use District_Challenge_Association with relates_district_type, relates_challenge and has_degree.</rdfs:comment>
         <rdfs:label xml:lang="en">has urban challenge district priority</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -406,8 +415,11 @@ Additional resources: the [guide to registering and querying association degrees
     <owl:ObjectProperty rdf:about="https://w3id.org/rooftop_activation#has_urban_challenge_owner_priority">
         <rdfs:domain rdf:resource="https://w3id.org/rooftop_activation#Urban_Challenge"/>
         <rdfs:range rdf:resource="https://w3id.org/rooftop_activation#Owner"/>
-        <rdfs:comment xml:lang="en">Inverse of has_owner_urban_challenge_priority.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Inverse of has_owner_urban_challenge_priority.
+
+Deprecated since 2.2.0. Use Owner_Challenge_Association with relates_owner_type, relates_challenge and has_degree.</rdfs:comment>
         <rdfs:label xml:lang="en">has urban challenge owner priority</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -560,12 +572,35 @@ Additional resources: the [guide to registering and querying association degrees
     
 
 
+    <!-- https://w3id.org/rooftop_activation#relates_district_type -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rooftop_activation#relates_district_type">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rooftop_activation#Association"/>
+        <rdfs:comment xml:lang="en">The district type (District subclass) involved in the association. The value is the class IRI used as an individual (OWL 2 punning).</rdfs:comment>
+        <rdfs:label xml:lang="en">relates district type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/rooftop_activation#relates_incentive -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rooftop_activation#relates_incentive">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/rooftop_activation#Association"/>
+        <rdfs:range rdf:resource="https://w3id.org/rooftop_activation#Incentive"/>
+        <rdfs:comment xml:lang="en">The specific incentive (an individual of an Incentive subclass) involved in the association. To use an incentive type, see relates_incentive_type</rdfs:comment>
+        <rdfs:label xml:lang="en">relates incentive</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/rooftop_activation#relates_incentive_type -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rooftop_activation#relates_incentive_type">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/rooftop_activation#Association"/>
-        <rdfs:comment xml:lang="en">The incentive type (Incentive subclass) involved in the association. The value is the class IRI used as an individual (OWL 2 punning).</rdfs:comment>
+        <rdfs:comment xml:lang="en">The incentive type (Incentive subclass) involved in the association. The value is the class IRI used as an individual (OWL 2 punning). To use a specific incentive, see relates_incentive</rdfs:comment>
         <rdfs:label xml:lang="en">relates incentive type</rdfs:label>
     </owl:ObjectProperty>
     
@@ -680,6 +715,16 @@ Additional resources: the [guide to registering and querying association degrees
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
         <rdfs:comment xml:lang="en">Links a building to the OpenStreetMap way or relation that represents it, as a full openstreetmap.org URL. OSM identifiers may change, so the geometry should also be kept.</rdfs:comment>
         <rdfs:label xml:lang="en">has OSM element</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/rooftop_activation#has_priority -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rooftop_activation#has_priority">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rooftop_activation#has_degree"/>
+        <rdfs:comment xml:lang="en">Priority between two Things, from 0 (none) to 1 (strongest).</rdfs:comment>
+        <rdfs:label xml:lang="en">has priority</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -808,7 +853,7 @@ Additional resources: the [guide to registering and querying association degrees
     <!-- https://w3id.org/rooftop_activation#Association -->
 
     <owl:Class rdf:about="https://w3id.org/rooftop_activation#Association">
-        <rdfs:comment xml:lang="en">A weighted link between two types of the ontology, expressed as an individual so that it can carry a degree.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A weighted link between two entities of the ontology, types or individuals, expressed as an individual so that it can carry a degree.</rdfs:comment>
         <rdfs:label xml:lang="en">Association</rdfs:label>
     </owl:Class>
     
@@ -967,8 +1012,6 @@ Additional resources: the [guide to registering and querying association degrees
 
     <owl:Class rdf:about="https://w3id.org/rooftop_activation#City_Center">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rooftop_activation#District"/>
-        <rdfs:comment xml:lang="en">The historic and functional core, with the highest density and the strongest heritage constraints.</rdfs:comment>
-        <rdfs:label xml:lang="en">City Center</rdfs:label>
     </owl:Class>
     
 
@@ -1267,6 +1310,34 @@ Additional resources: the [guide to registering and querying association degrees
         <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
         <rdfs:comment xml:lang="en">A delimited part of a city or its surroundings with a characteristic built form, density and function. Buildings are linked to districts through is_located_in, and districts to regions through is_part_of_region.</rdfs:comment>
         <rdfs:label xml:lang="en">District</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rooftop_activation#District_Challenge_Association -->
+
+    <owl:Class rdf:about="https://w3id.org/rooftop_activation#District_Challenge_Association">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rooftop_activation#Association"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rooftop_activation#relates_challenge"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/rooftop_activation#Urban_Challenge"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rooftop_activation#relates_district_type"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rooftop_activation#has_priority"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Degree to which a district type is interested on addressing an urban challenge.</rdfs:comment>
+        <rdfs:label xml:lang="en">District-Challenge Association</rdfs:label>
     </owl:Class>
     
 
@@ -1613,8 +1684,6 @@ Additional resources: the [guide to registering and querying association degrees
 
     <owl:Class rdf:about="https://w3id.org/rooftop_activation#Green">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rooftop_activation#Residential"/>
-        <rdfs:comment xml:lang="en">Residential fabric set within substantial open and planted space.</rdfs:comment>
-        <rdfs:label xml:lang="en">Green residential district</rdfs:label>
     </owl:Class>
     
 
@@ -1623,8 +1692,6 @@ Additional resources: the [guide to registering and querying association degrees
 
     <owl:Class rdf:about="https://w3id.org/rooftop_activation#Green_Areas">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rooftop_activation#District"/>
-        <rdfs:comment xml:lang="en">Districts dominated by open and planted land.</rdfs:comment>
-        <rdfs:label xml:lang="en">Green Areas</rdfs:label>
     </owl:Class>
     
 
@@ -1752,8 +1819,6 @@ Additional resources: the [guide to registering and querying association degrees
     <owl:Class rdf:about="https://w3id.org/rooftop_activation#Historical">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rooftop_activation#City_Center"/>
         <owl:disjointWith rdf:resource="https://w3id.org/rooftop_activation#Modern"/>
-        <rdfs:comment xml:lang="en">The protected historic fabric of the core.</rdfs:comment>
-        <rdfs:label xml:lang="en">Historical city center</rdfs:label>
     </owl:Class>
     
 
@@ -1865,7 +1930,7 @@ Additional resources: the [guide to registering and querying association degrees
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">Degree to which an incentive type is suitable for, or used by, an owner type.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Degree to which an incentive type is suitable for, or used by, an owner type. To add an association degree between a specific incentive and owner type, see Specific  Incentive-Owner Association</rdfs:comment>
         <rdfs:label xml:lang="en">Incentive-Owner Association</rdfs:label>
     </owl:Class>
     
@@ -1894,8 +1959,6 @@ Additional resources: the [guide to registering and querying association degrees
 
     <owl:Class rdf:about="https://w3id.org/rooftop_activation#Industrial_and_Service_Districts">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rooftop_activation#District"/>
-        <rdfs:comment xml:lang="en">Areas of production, logistics and services, characterised by large flat roofs.</rdfs:comment>
-        <rdfs:label xml:lang="en">Industrial and Service Districts</rdfs:label>
     </owl:Class>
     
 
@@ -2115,8 +2178,6 @@ Additional resources: the [guide to registering and querying association degrees
 
     <owl:Class rdf:about="https://w3id.org/rooftop_activation#Modern">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rooftop_activation#City_Center"/>
-        <rdfs:comment xml:lang="en">Recently developed or redeveloped parts of the core.</rdfs:comment>
-        <rdfs:label xml:lang="en">Modern city center</rdfs:label>
     </owl:Class>
     
 
@@ -2156,8 +2217,6 @@ Additional resources: the [guide to registering and querying association degrees
     <owl:Class rdf:about="https://w3id.org/rooftop_activation#Neighborhood_Center">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rooftop_activation#Sub-center"/>
         <owl:disjointWith rdf:resource="https://w3id.org/rooftop_activation#Village_Center"/>
-        <rdfs:comment xml:lang="en">A local hub serving the surrounding residential fabric.</rdfs:comment>
-        <rdfs:label xml:lang="en">Neighborhood Center</rdfs:label>
     </owl:Class>
     
 
@@ -2314,6 +2373,34 @@ Additional resources: the [guide to registering and querying association degrees
     
 
 
+    <!-- https://w3id.org/rooftop_activation#Owner_Challenge_Association -->
+
+    <owl:Class rdf:about="https://w3id.org/rooftop_activation#Owner_Challenge_Association">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rooftop_activation#Association"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rooftop_activation#relates_challenge"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/rooftop_activation#Urban_Challenge"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rooftop_activation#relates_owner_type"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rooftop_activation#has_priority"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Degree to which an owner type is interested on addressing an urban challenge.</rdfs:comment>
+        <rdfs:label xml:lang="en">Owner-Challenge Association</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/rooftop_activation#Owner_Rooftop_Association -->
 
     <owl:Class rdf:about="https://w3id.org/rooftop_activation#Owner_Rooftop_Association">
@@ -2347,8 +2434,6 @@ Additional resources: the [guide to registering and querying association degrees
     <owl:Class rdf:about="https://w3id.org/rooftop_activation#Parks_Sport_Facilities">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rooftop_activation#Green_Areas"/>
         <owl:disjointWith rdf:resource="https://w3id.org/rooftop_activation#Rural_Areas"/>
-        <rdfs:comment xml:lang="en">Designed and managed public open space.</rdfs:comment>
-        <rdfs:label xml:lang="en">Parks Sport Facilities</rdfs:label>
     </owl:Class>
     
 
@@ -2910,8 +2995,6 @@ Additional resources: the [guide to registering and querying association degrees
 
     <owl:Class rdf:about="https://w3id.org/rooftop_activation#Residential">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rooftop_activation#District"/>
-        <rdfs:comment xml:lang="en">Districts dominated by housing.</rdfs:comment>
-        <rdfs:label xml:lang="en">Residential district</rdfs:label>
     </owl:Class>
     
 
@@ -3025,8 +3108,6 @@ ex:rooftop_001_geom a geo:Geometry ;
 
     <owl:Class rdf:about="https://w3id.org/rooftop_activation#Rural_Areas">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rooftop_activation#Green_Areas"/>
-        <rdfs:comment xml:lang="en">Agricultural and undeveloped land within the wider urban region.</rdfs:comment>
-        <rdfs:label xml:lang="en">Rural Areas</rdfs:label>
     </owl:Class>
     
 
@@ -3045,6 +3126,34 @@ ex:rooftop_001_geom a geo:Geometry ;
         <rdfs:subClassOf rdf:resource="https://w3id.org/rooftop_activation#Urban_Challenge"/>
         <rdfs:comment xml:lang="en">Uneven access to services, facilities and safe shared spaces, and spatial separation of social groups between neighbourhoods.</rdfs:comment>
         <rdfs:label xml:lang="en">Social Inequality and Segregation Challenge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rooftop_activation#Specific_Incentive_Owner_Association -->
+
+    <owl:Class rdf:about="https://w3id.org/rooftop_activation#Specific_Incentive_Owner_Association">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rooftop_activation#Association"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rooftop_activation#relates_incentive"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/rooftop_activation#Incentive"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rooftop_activation#relates_owner_type"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rooftop_activation#has_degree"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Degree to which an specific incentive is suitable for, or used by, an owner type. To add an association degree between incentive type and owner type, see Incentive-Owner Association</rdfs:comment>
+        <rdfs:label xml:lang="en">Specific Incentive-Owner Association</rdfs:label>
     </owl:Class>
     
 
@@ -3105,8 +3214,6 @@ ex:rooftop_001_geom a geo:Geometry ;
 
     <owl:Class rdf:about="https://w3id.org/rooftop_activation#Sub-center">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rooftop_activation#District"/>
-        <rdfs:comment xml:lang="en">A secondary concentration of activity within the urban area.</rdfs:comment>
-        <rdfs:label xml:lang="en">Sub-center</rdfs:label>
     </owl:Class>
     
 
@@ -3239,8 +3346,6 @@ ex:rooftop_001_geom a geo:Geometry ;
 
     <owl:Class rdf:about="https://w3id.org/rooftop_activation#Unused_Areas">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rooftop_activation#District"/>
-        <rdfs:comment xml:lang="en">Vacant, derelict or awaiting-development land.</rdfs:comment>
-        <rdfs:label xml:lang="en">Unused Areas</rdfs:label>
     </owl:Class>
     
 
@@ -3249,8 +3354,6 @@ ex:rooftop_001_geom a geo:Geometry ;
 
     <owl:Class rdf:about="https://w3id.org/rooftop_activation#Urban">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rooftop_activation#Residential"/>
-        <rdfs:comment xml:lang="en">Compact residential fabric with limited open space.</rdfs:comment>
-        <rdfs:label xml:lang="en">Urban residential district</rdfs:label>
     </owl:Class>
     
 
@@ -3277,8 +3380,6 @@ ex:rooftop_001_geom a geo:Geometry ;
 
     <owl:Class rdf:about="https://w3id.org/rooftop_activation#Urban_Green">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rooftop_activation#Residential"/>
-        <rdfs:comment xml:lang="en">Compact residential fabric with significant integrated greenery.</rdfs:comment>
-        <rdfs:label xml:lang="en">Urban Green residential district</rdfs:label>
     </owl:Class>
     
 
@@ -3351,8 +3452,6 @@ ex:rooftop_001_geom a geo:Geometry ;
 
     <owl:Class rdf:about="https://w3id.org/rooftop_activation#Village_Center">
         <rdfs:subClassOf rdf:resource="https://w3id.org/rooftop_activation#Sub-center"/>
-        <rdfs:comment xml:lang="en">A formerly independent settlement absorbed into the urban area.</rdfs:comment>
-        <rdfs:label xml:lang="en">Village Center</rdfs:label>
     </owl:Class>
     
 
@@ -3524,6 +3623,12 @@ ex:rooftop_001_geom a geo:Geometry ;
     <!-- https://w3id.org/rooftop_activation#Citizen_Micro-investment_Tax_Credit -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/rooftop_activation#Citizen_Micro-investment_Tax_Credit"/>
+    
+
+
+    <!-- https://w3id.org/rooftop_activation#City_Center -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rooftop_activation#City_Center"/>
     
 
 
@@ -3725,6 +3830,18 @@ ex:rooftop_001_geom a geo:Geometry ;
     
 
 
+    <!-- https://w3id.org/rooftop_activation#Green -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rooftop_activation#Green"/>
+    
+
+
+    <!-- https://w3id.org/rooftop_activation#Green_Areas -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rooftop_activation#Green_Areas"/>
+    
+
+
     <!-- https://w3id.org/rooftop_activation#Green_Bond -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/rooftop_activation#Green_Bond"/>
@@ -3772,6 +3889,12 @@ ex:rooftop_001_geom a geo:Geometry ;
         <rdfs:comment xml:lang="en">Lack of low-carbon heat sources to replace fossil fuel heating.</rdfs:comment>
         <rdfs:label xml:lang="en">Heat/lack of heat sources</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/rooftop_activation#Historical -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rooftop_activation#Historical"/>
     
 
 
@@ -3840,6 +3963,12 @@ ex:rooftop_001_geom a geo:Geometry ;
     <!-- https://w3id.org/rooftop_activation#Industrial -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/rooftop_activation#Industrial"/>
+    
+
+
+    <!-- https://w3id.org/rooftop_activation#Industrial_and_Service_Districts -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rooftop_activation#Industrial_and_Service_Districts"/>
     
 
 
@@ -4061,6 +4190,18 @@ ex:rooftop_001_geom a geo:Geometry ;
     
 
 
+    <!-- https://w3id.org/rooftop_activation#Modern -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rooftop_activation#Modern"/>
+    
+
+
+    <!-- https://w3id.org/rooftop_activation#Neighborhood_Center -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rooftop_activation#Neighborhood_Center"/>
+    
+
+
     <!-- https://w3id.org/rooftop_activation#Neighbourhood_segregation -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/rooftop_activation#Neighbourhood_segregation">
@@ -4148,6 +4289,12 @@ ex:rooftop_001_geom a geo:Geometry ;
         <rdfs:comment xml:lang="en">Pressure on public space from demand for vehicle parking.</rdfs:comment>
         <rdfs:label xml:lang="en">Parking demand in public space</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/rooftop_activation#Parks_Sport_Facilities -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rooftop_activation#Parks_Sport_Facilities"/>
     
 
 
@@ -4303,6 +4450,12 @@ ex:rooftop_001_geom a geo:Geometry ;
     
 
 
+    <!-- https://w3id.org/rooftop_activation#Residential -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rooftop_activation#Residential"/>
+    
+
+
     <!-- https://w3id.org/rooftop_activation#Reuse_rainwater -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/rooftop_activation#Reuse_rainwater">
@@ -4332,6 +4485,12 @@ ex:rooftop_001_geom a geo:Geometry ;
         <rdfs:comment xml:lang="en">The city of Rotterdam, the Netherlands, used as the geographic scope for the incentives it implements.</rdfs:comment>
         <rdfs:label xml:lang="en">Rotterdam</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/rooftop_activation#Rural_Areas -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rooftop_activation#Rural_Areas"/>
     
 
 
@@ -4400,6 +4559,12 @@ ex:rooftop_001_geom a geo:Geometry ;
         <rdfs:comment xml:lang="en">Capturing and slowing down stormwater on the rooftop to reduce peak runoff into the drainage system. Realises the blue activation type.</rdfs:comment>
         <rdfs:label xml:lang="en">Stormwater management function</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/rooftop_activation#Sub-center -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rooftop_activation#Sub-center"/>
     
 
 
@@ -4477,6 +4642,24 @@ ex:rooftop_001_geom a geo:Geometry ;
     
 
 
+    <!-- https://w3id.org/rooftop_activation#Unused_Areas -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rooftop_activation#Unused_Areas"/>
+    
+
+
+    <!-- https://w3id.org/rooftop_activation#Urban -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rooftop_activation#Urban"/>
+    
+
+
+    <!-- https://w3id.org/rooftop_activation#Urban_Green -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rooftop_activation#Urban_Green"/>
+    
+
+
     <!-- https://w3id.org/rooftop_activation#Urban_heat_islands -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/rooftop_activation#Urban_heat_islands">
@@ -4500,6 +4683,12 @@ ex:rooftop_001_geom a geo:Geometry ;
         <rdfs:comment xml:lang="en">Using the rooftop for technical installations, such as building services equipment, telecommunications antennas or network infrastructure. Realises the gray activation type.</rdfs:comment>
         <rdfs:label xml:lang="en">Utilities and infrastructure functions</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/rooftop_activation#Village_Center -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/rooftop_activation#Village_Center"/>
     
 
 
@@ -4566,6 +4755,10 @@ ex:rooftop_001_geom a geo:Geometry ;
     <rdf:Description rdf:about="https://w3id.org/rooftop_activation#Citizen_Micro-investment_Tax_Credit">
         <rdfs:comment xml:lang="en">A tax credit granted to citizens who make small investments in local rooftop or energy projects, for example through a cooperative.</rdfs:comment>
         <rdfs:label xml:lang="en">Citizen Micro-investment Tax Credit</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/rooftop_activation#City_Center">
+        <rdfs:comment xml:lang="en">The historic and functional core, with the highest density and the strongest heritage constraints.</rdfs:comment>
+        <rdfs:label xml:lang="en">City Center</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/rooftop_activation#Contractual_Condition">
         <rdfs:comment xml:lang="en">A clause in a lease, sale, concession or permit agreement that requires or rewards rooftop activation as a condition of the contract.</rdfs:comment>
@@ -4639,6 +4832,14 @@ ex:rooftop_001_geom a geo:Geometry ;
         <rdfs:comment xml:lang="en">A rooftop activated for utilities and technical infrastructure, such as building services, telecommunications equipment or network installations. Defined class: membership is inferred from has_function.</rdfs:comment>
         <rdfs:label xml:lang="en">Gray Rooftop</rdfs:label>
     </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/rooftop_activation#Green">
+        <rdfs:comment xml:lang="en">Residential fabric set within substantial open and planted space.</rdfs:comment>
+        <rdfs:label xml:lang="en">Green residential district</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/rooftop_activation#Green_Areas">
+        <rdfs:comment xml:lang="en">Districts dominated by open and planted land.</rdfs:comment>
+        <rdfs:label xml:lang="en">Green Areas</rdfs:label>
+    </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/rooftop_activation#Green_Bond">
         <rdfs:comment xml:lang="en">A bond whose proceeds are earmarked for projects with environmental benefits, such as green, blue or solar rooftops.</rdfs:comment>
         <rdfs:label xml:lang="en">Green Bond</rdfs:label>
@@ -4659,6 +4860,10 @@ ex:rooftop_001_geom a geo:Geometry ;
         <rdfs:comment xml:lang="en">Pooling of demand from several owners to buy equipment or services jointly, or to deliver a shared rooftop project, at lower cost.</rdfs:comment>
         <rdfs:label xml:lang="en">Group Purchases and Collective Project</rdfs:label>
     </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/rooftop_activation#Historical">
+        <rdfs:comment xml:lang="en">The protected historic fabric of the core.</rdfs:comment>
+        <rdfs:label xml:lang="en">Historical city center</rdfs:label>
+    </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/rooftop_activation#Home_Owner_Associations">
         <rdfs:comment xml:lang="en">Collective bodies of apartment owners. Decisions require a qualified majority, which lengthens timelines.</rdfs:comment>
         <rdfs:label xml:lang="en">Home Owner Associations</rdfs:label>
@@ -4670,6 +4875,10 @@ ex:rooftop_001_geom a geo:Geometry ;
     <rdf:Description rdf:about="https://w3id.org/rooftop_activation#Industrial">
         <rdfs:comment xml:lang="en">Owners of production and logistics buildings, typically holding large flat roofs.</rdfs:comment>
         <rdfs:label xml:lang="en">Industrial owner</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/rooftop_activation#Industrial_and_Service_Districts">
+        <rdfs:comment xml:lang="en">Areas of production, logistics and services, characterised by large flat roofs.</rdfs:comment>
+        <rdfs:label xml:lang="en">Industrial and Service Districts</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/rooftop_activation#Information_or_Engagement">
         <rdfs:comment xml:lang="en">Campaigns, events or outreach that raise awareness of rooftop activation and engage owners and residents.</rdfs:comment>
@@ -4703,6 +4912,14 @@ ex:rooftop_001_geom a geo:Geometry ;
         <rdfs:comment xml:lang="en">Maps and cadastres that show the activation potential of rooftops, for example for solar energy, greening or water retention.</rdfs:comment>
         <rdfs:label xml:lang="en">Mapping Tools</rdfs:label>
     </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/rooftop_activation#Modern">
+        <rdfs:comment xml:lang="en">Recently developed or redeveloped parts of the core.</rdfs:comment>
+        <rdfs:label xml:lang="en">Modern city center</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/rooftop_activation#Neighborhood_Center">
+        <rdfs:comment xml:lang="en">A local hub serving the surrounding residential fabric.</rdfs:comment>
+        <rdfs:label xml:lang="en">Neighborhood Center</rdfs:label>
+    </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/rooftop_activation#Offset_or_Deduction_Mechanism">
         <rdfs:comment xml:lang="en">A mechanism that allows rooftop activation to offset or be deducted from other obligations, such as required green space, parking provision or stormwater retention on the plot.</rdfs:comment>
         <rdfs:label xml:lang="en">Offset or Deduction Mechanism</rdfs:label>
@@ -4722,6 +4939,10 @@ ex:rooftop_001_geom a geo:Geometry ;
     <rdf:Description rdf:about="https://w3id.org/rooftop_activation#Orange_Rooftop">
         <rdfs:comment xml:lang="en">A rooftop activated for mobility or logistics, such as parking, vehicle charging, delivery hubs or drone landing. Defined class: membership is inferred from has_function.</rdfs:comment>
         <rdfs:label xml:lang="en">Orange Rooftop</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/rooftop_activation#Parks_Sport_Facilities">
+        <rdfs:comment xml:lang="en">Designed and managed public open space.</rdfs:comment>
+        <rdfs:label xml:lang="en">Parks Sport Facilities</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/rooftop_activation#Planning_Instrument">
         <rdfs:comment xml:lang="en">Instrument type grouping incentives that act through spatial planning, strategies and public programmes.</rdfs:comment>
@@ -4791,6 +5012,10 @@ ex:rooftop_001_geom a geo:Geometry ;
         <rdfs:comment xml:lang="en">Use of rooftop space or equipment through a rental or lease, for example an owner leasing the roof to a solar operator or leasing an installation instead of buying it.</rdfs:comment>
         <rdfs:label xml:lang="en">Renting or Leasing</rdfs:label>
     </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/rooftop_activation#Residential">
+        <rdfs:comment xml:lang="en">Districts dominated by housing.</rdfs:comment>
+        <rdfs:label xml:lang="en">Residential district</rdfs:label>
+    </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/rooftop_activation#Revolving">
         <rdfs:comment xml:lang="en">A revolving fund in which repayments and returns from earlier projects are reinvested in new ones.</rdfs:comment>
         <rdfs:label xml:lang="en">Revolving fund</rdfs:label>
@@ -4798,6 +5023,10 @@ ex:rooftop_001_geom a geo:Geometry ;
     <rdf:Description rdf:about="https://w3id.org/rooftop_activation#Revolving_Credit">
         <rdfs:comment xml:lang="en">A credit line that the borrower can draw, repay and draw again up to an agreed limit.</rdfs:comment>
         <rdfs:label xml:lang="en">Revolving Credit</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/rooftop_activation#Rural_Areas">
+        <rdfs:comment xml:lang="en">Agricultural and undeveloped land within the wider urban region.</rdfs:comment>
+        <rdfs:label xml:lang="en">Rural Areas</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/rooftop_activation#Secured_Green">
         <rdfs:comment xml:lang="en">A secured green bond, backed by collateral from one or more green projects, such as the installations or their cash flows.</rdfs:comment>
@@ -4810,6 +5039,10 @@ ex:rooftop_001_geom a geo:Geometry ;
     <rdf:Description rdf:about="https://w3id.org/rooftop_activation#Steward-Owned">
         <rdfs:comment xml:lang="en">A fund or company in steward ownership, where control stays with people connected to its mission and profits are bound to that purpose rather than distributed to shareholders.</rdfs:comment>
         <rdfs:label xml:lang="en">Steward-Owned</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/rooftop_activation#Sub-center">
+        <rdfs:comment xml:lang="en">A secondary concentration of activity within the urban area.</rdfs:comment>
+        <rdfs:label xml:lang="en">Sub-center</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/rooftop_activation#Subsidy">
         <rdfs:comment xml:lang="en">A recurring payment or price support that reduces the cost of, or raises the return on, an activated rooftop during its operation.</rdfs:comment>
@@ -4827,9 +5060,25 @@ ex:rooftop_001_geom a geo:Geometry ;
         <rdfs:comment xml:lang="en">Tools that help owners and professionals identify, assess or plan rooftop activation.</rdfs:comment>
         <rdfs:label xml:lang="en">Tools</rdfs:label>
     </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/rooftop_activation#Unused_Areas">
+        <rdfs:comment xml:lang="en">Vacant, derelict or awaiting-development land.</rdfs:comment>
+        <rdfs:label xml:lang="en">Unused Areas</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/rooftop_activation#Urban">
+        <rdfs:comment xml:lang="en">Compact residential fabric with limited open space.</rdfs:comment>
+        <rdfs:label xml:lang="en">Urban residential district</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/rooftop_activation#Urban_Green">
+        <rdfs:comment xml:lang="en">Compact residential fabric with significant integrated greenery.</rdfs:comment>
+        <rdfs:label xml:lang="en">Urban Green residential district</rdfs:label>
+    </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/rooftop_activation#Use_or_Access_Instrument">
         <rdfs:comment xml:lang="en">Instrument type grouping incentives that give access to rooftop space, equipment or services without full ownership or up-front purchase.</rdfs:comment>
         <rdfs:label xml:lang="en">Use or Access Instrument</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/rooftop_activation#Village_Center">
+        <rdfs:comment xml:lang="en">A formerly independent settlement absorbed into the urban area.</rdfs:comment>
+        <rdfs:label xml:lang="en">Village Center</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/rooftop_activation#Voucher">
         <rdfs:comment xml:lang="en">A voucher of fixed value that an owner can redeem for eligible goods or services, such as a feasibility study or an installation.</rdfs:comment>
@@ -5136,6 +5385,28 @@ ex:rooftop_001_geom a geo:Geometry ;
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/rooftop_activation#District_Challenge_Association"/>
+            <rdf:Description rdf:about="https://w3id.org/rooftop_activation#Incentive_Owner_Association"/>
+            <rdf:Description rdf:about="https://w3id.org/rooftop_activation#Owner_Challenge_Association"/>
+            <rdf:Description rdf:about="https://w3id.org/rooftop_activation#Owner_Rooftop_Association"/>
+            <rdf:Description rdf:about="https://w3id.org/rooftop_activation#Rooftop_Challenge_Association"/>
+            <rdf:Description rdf:about="https://w3id.org/rooftop_activation#Specific_Incentive_Owner_Association"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/rooftop_activation#Era_1830_1918"/>
+            <rdf:Description rdf:about="https://w3id.org/rooftop_activation#From_1919_to_1945"/>
+            <rdf:Description rdf:about="https://w3id.org/rooftop_activation#Late_20th_Century"/>
+            <rdf:Description rdf:about="https://w3id.org/rooftop_activation#Post_WWII"/>
+            <rdf:Description rdf:about="https://w3id.org/rooftop_activation#Pre_1830"/>
+            <rdf:Description rdf:about="https://w3id.org/rooftop_activation#21st_Century"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="https://w3id.org/rooftop_activation#European_Source"/>
             <rdf:Description rdf:about="https://w3id.org/rooftop_activation#Municipal_Source"/>
             <rdf:Description rdf:about="https://w3id.org/rooftop_activation#National_Source"/>
@@ -5220,14 +5491,6 @@ ex:rooftop_001_geom a geo:Geometry ;
             <rdf:Description rdf:about="https://w3id.org/rooftop_activation#Private_Project_Developers"/>
             <rdf:Description rdf:about="https://w3id.org/rooftop_activation#Real_Estate"/>
             <rdf:Description rdf:about="https://w3id.org/rooftop_activation#Religious_Institution"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/rooftop_activation#Incentive_Owner_Association"/>
-            <rdf:Description rdf:about="https://w3id.org/rooftop_activation#Owner_Rooftop_Association"/>
-            <rdf:Description rdf:about="https://w3id.org/rooftop_activation#Rooftop_Challenge_Association"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>

@@ -13,9 +13,9 @@ abstract: >-
   register weighted associations between rooftop activation types, urban
   challenges, owner types and incentive types, optionally per region.
 type: dataset
-version: "2.0.0"
-# Add the release date (YYYY-MM-DD) when version 2.0.0 is published:
-date-released: "2026-09-29"
+version: "2.2.0"
+# Add the release date (YYYY-MM-DD) when version 2.2.0 is published:
+date-released: "2026-10-02"
 url: "https://w3id.org/rooftop_activation"
 repository-code: "https://github.com/alejandro3500/rooftop_activation"
 license: CC-BY-4.0

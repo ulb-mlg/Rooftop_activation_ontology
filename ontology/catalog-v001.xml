@@ -5,6 +5,6 @@
     <uri id="Imports Wizard Entry" name="http://www.opengis.net/ont/geosparql#1.1" uri="http://www.opengis.net/ont/geosparql"/>
     <uri id="Imports Wizard Entry" name="http://www.opengis.net/ont/geosparql#1.1" uri="http://www.opengis.net/ont/geosparql#"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public">
-        <uri id="Automatically generated entry, Timestamp=1790769986348" name="https://w3id.org/rooftop_activation" uri="rooftop_activation_ontology.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1790937471305" name="https://w3id.org/rooftop_activation" uri="rooftop_activation_ontology.rdf"/>
     </group>
 </catalog>
